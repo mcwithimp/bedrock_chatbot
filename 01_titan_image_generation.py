@@ -56,8 +56,8 @@ def main():
     # 이미지 생성기 인스턴스를 생성함
     generator = ImageGenerator()
     # 이미지 생성을 위한 텍스트 프롬프트 설정
-    prompt = "cute cat"
-    # 이미지를 생성하고 그 경로를 반환함
+    prompt = "Golden Retriever scuba diving in the deep sea wearing a mask and flippers"
+    # 이미지를 생성하고 그 경로를 반환
     image_path = generator.generate_image(prompt)
     logging.info(f"생성된 이미지 경로: {image_path}")
 
