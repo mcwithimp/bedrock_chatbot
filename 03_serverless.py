@@ -14,14 +14,14 @@ def lambda_handler(event, context):
     try:
         # HTTP GET 요청을 확인
         if event["requestContext"]["http"]["method"] == "GET":
-            return generate_response(None, "GET 요청을 처리했습니다. 이 API는 POST 요청을 기대합니다.")
+            return generate_response(None, "GET 요청을 처리했습니다.")
 
         # Bedrock Runtime 서비스 클라이언트를 생성
         bedrock_runtime = boto3.client("bedrock-runtime", region_name="us-east-1")
 
         # 이벤트에서 'body'를 추출하고 JSON으로 변환
         request_body = json.loads(event.get("body", '{}'))
-        prompt = request_body.get("prompt", "Amazon Bedrock이 뭐야? 3문장 이내로 답변해주세요.")
+        prompt = request_body.get("prompt", "Amazon Bedrock이 뭐야? 3문장 이내로 대답해.")
 
         # 처리할 프롬프트를 로깅
         print(f"Processing prompt: {prompt}")
