@@ -1,4 +1,4 @@
-service: ml-kmu-<<YOUR_NUMBER>>-lambda-bedrock-api
+service: <<YOUR_LAMBDA_FUNCTION_NAME>>
 frameworkVersion: "3"
 
 plugins:
